@@ -32,7 +32,7 @@ def algo_end():
     global algo_startMem, algo_startTime, algo_memUsage, algo_duration
     algo_memUsage = allocated_memory_size()-algo_startMem
     algo_duration = time.time() - algo_startTime
-    print("alogrithm took", algo_memUsage/(2.**20), "MBytes,", algo_duration, "seconds")
+    print("alogrithm took", algo_memUsage/(2.**20), "MBytes,", algo_duration, "seconds, in total", allocated_memory_size()/(2.**20), "MBytes")
 
 def in_notebook():
     return 'ipykernel' in sys.modules
